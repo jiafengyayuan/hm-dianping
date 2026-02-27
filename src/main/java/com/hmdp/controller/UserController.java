@@ -65,7 +65,7 @@ public class UserController {
     @GetMapping("/me")
     public Result me(){
         UserDTO user = UserHolder.getUser();
-        return Result.ok();
+        return Result.ok(user);
     }
 
     @GetMapping("/info/{id}")
